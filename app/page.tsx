@@ -172,7 +172,7 @@ export default function Home() {
 
         <div className="flex justify-center">
           <div className="w-full max-w-8xl flex justify-center">
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid md:grid-cols-2 md:gap-10">
               <CardContainer>
                 <CardBody className="w-86 h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
                   <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />

@@ -7,12 +7,6 @@ import { LucideIcon, SparklesIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { HomeIcon, Repeat, TicketIcon } from "lucide-react";
 
-interface NavItem {
-  name: string;
-  url: string;
-  icon: LucideIcon;
-}
-
 interface NavBarProps {
   className?: string;
 }
@@ -26,17 +20,6 @@ export function NavBar({ className }: NavBarProps) {
   ];
 
   const [activeTab, setActiveTab] = useState(items[0].name);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div
