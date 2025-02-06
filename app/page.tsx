@@ -62,14 +62,6 @@ const events = [
   },
 ];
 
-const arr = [
-  "earlybird out now",
-  "earlybird out now",
-  "earlybird out now",
-  "earlybird out now",
-  "earlybird out now",
-];
-
 export default function Home() {
   return (
     <div className="overflow-hidden">
@@ -157,7 +149,7 @@ export default function Home() {
 
         <div className="py-12">
           <Marquee pauseOnHover={false} direction="left" speed={7}>
-            {Array(4)
+            {Array(8)
               .fill("early bird open")
               .map((message, index) => (
                 <h4

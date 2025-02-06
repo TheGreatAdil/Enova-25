@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import CustomFont from "next/font/local";
@@ -7,11 +6,6 @@ import CustomFont from "next/font/local";
 const punavuori = CustomFont({
   src: "../fonts/punavuori.woff",
   variable: "--font-punavuori",
-});
-
-const inter = Inter({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"antialiased dark scroll-smooth"}>
+      <body className={`${punavuori.variable} antialiased dark scroll-smooth`}>
         <div>
           <NavBar />
         </div>
