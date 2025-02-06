@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Enova '25",
   },
   description:
-    "Join Enova '25, a premier three-day tech fest by IEDC MEA SB, featuring inspiring talk sessions, ideathon, cultural performances, RC shows, and fashion show. Don't miss out, register your tickets now for an unforgettable experience!",
+    "Join Enova '25, a three-day tech fest by IEDC MEA SB with talks, ideathon, RC shows, cultural performances, and more. Register now for an unforgettable experience!",
 };
 
 export default function RootLayout({
@@ -40,13 +40,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${punavuori.variable} antialiased dark scroll-smooth`}>
-        <Head>
-          <link rel="canonical" href="https://enova.iedcmea.org" />
-        </Head>
         <div>
           <NavBar />
         </div>
         {children}
+
+        <Head>
+          <meta property="og:title" content="Enova '25 | Tech Fest" />
+          <meta
+            property="og:description"
+            content="Join Enova '25, a three-day tech fest by IEDC MEA SB with talks, ideathon, RC shows, cultural performances, and more!"
+          />
+          <meta property="og:image" content="/enova logo.png" />
+          <meta property="og:url" content="https://enova.iedcmea.org" />
+          <meta property="og:type" content="website" />
+
+          <link rel="canonical" href="https://enova.iedcmea.org" />
+        </Head>
       </body>
     </html>
   );
