@@ -74,7 +74,13 @@ export default function Home() {
           <div className="flex justify-center pt-32 md:py-64">
             <div className="w-full max-w-2xl md:max-w-4xl grid md:flex justify-center md:justify-start items-end ">
               <div className="flex justify-center mb-8 md:mb-0">
-                <Image src={Enova} width={200} height={200} alt="Enova logo" />
+                <Image
+                  src={Enova}
+                  width={200}
+                  height={200}
+                  alt="Enova logo"
+                  priority
+                />
               </div>
               <div className="text-center md:text-left">
                 <h1 className="text-6xl md:text-8xl font-bold">enova</h1>
@@ -86,7 +92,10 @@ export default function Home() {
           <div className="pt-4 md:py-64">
             <div className="flex justify-center w-full max-w-2xl md:max-w-4xl">
               <div className="grid justify-center mb-8 md:mb-0 pt-12">
-                <h2>Time Left</h2>
+                <div className="flex justify-between">
+                  <h2>Time Left</h2>
+                  <h2 className="text-accent">FEB 21, 22, 23</h2>
+                </div>
                 <div className="flex justify-center">
                   <TimeLeft />
                 </div>
@@ -143,11 +152,11 @@ export default function Home() {
       </section>
 
       <section className="min-h-screen justify-center" id="tickets">
-        <div className="flex justify-center pt-16  md:pt-32 md:mt-0">
+        <div className="flex justify-center pt-16 md:pt-32 md:mt-0">
           <h2 className="text-2xl md:text-6xl">tickets</h2>
         </div>
 
-        <div className="py-12">
+        <div className="mt-16">
           <Marquee pauseOnHover={false} direction="left" speed={7}>
             {Array(8)
               .fill("early bird open")
@@ -163,74 +172,98 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center">
-          <div className="w-full max-w-8xl flex justify-center">
-            <div className="grid md:grid-cols-2 md:gap-10">
-              <CardContainer>
-                <CardBody className="w-86 h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
-                  <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
-                  <div className="p-6">
-                    <CardItem translateZ="25" className="text-xl text-white">
-                      EARLY BIRD
-                    </CardItem>
-                    <CardItem translateZ="50" className="text-8xl text-accent">
-                      ₹799
-                    </CardItem>
+          <div className="mt-16 grid md:grid-cols-2 md:gap-10">
+            <CardContainer>
+              <CardBody className="w-86 h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
+                <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
+                <div className="p-6">
+                  <CardItem translateZ="25" className="text-xl text-white">
+                    EARLY BIRD
+                  </CardItem>
+                  <CardItem translateZ="50" className="text-8xl text-accent">
+                    ₹799
+                  </CardItem>
+                  <CardItem
+                    translateZ="25"
+                    className="text-sm text-muted-foreground"
+                  >
+                    FOR IEDC MEMBERS
+                  </CardItem>
+                  <CardItem
+                    translateZ={125}
+                    className="w-full flex justify-center"
+                  >
+                    <Image
+                      width={275}
+                      height={100}
+                      loading="lazy"
+                      src="/members ticket.png"
+                      alt="members ticket"
+                      className="py-14"
+                    />
+                  </CardItem>
+                  <div className="w-full flex justify-center mt-5">
                     <CardItem
-                      translateZ="25"
-                      className="text-sm text-muted-foreground"
+                      translateZ="75"
+                      className="w-full flex justify-center"
                     >
-                      FOR IEDC MEMBERS
-                    </CardItem>
-                    <div className="w-full flex justify-center mt-64">
-                      <CardItem
-                        translateZ="75"
-                        className="w-full flex justify-center"
+                      <a
+                        href="https://makemypass.com/enova-mea"
+                        className="w-full h-16 flex justify-center text-2xl items-center border-border border hover:bg-accent rounded-lg transition-all duration-500"
                       >
-                        <a
-                          href="https://makemypass.com/enova-mea"
-                          className="w-full h-16 flex justify-center text-2xl items-center border-border border hover:bg-accent rounded-lg transition-all duration-500"
-                        >
-                          get tickets
-                        </a>
-                      </CardItem>
-                    </div>
+                        get tickets
+                      </a>
+                    </CardItem>
                   </div>
-                </CardBody>
-              </CardContainer>
+                </div>
+              </CardBody>
+            </CardContainer>
 
-              <CardContainer>
-                <CardBody className="w-86 h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
-                  <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
-                  <div className="p-6">
-                    <CardItem translateZ="25" className="text-xl text-white">
-                      EARLY BIRD
-                    </CardItem>
-                    <CardItem translateZ="50" className="text-8xl text-accent">
-                      ₹899
-                    </CardItem>
+            <CardContainer>
+              <CardBody className="w-86 h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
+                <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
+                <div className="p-6">
+                  <CardItem translateZ="25" className="text-xl text-white">
+                    EARLY BIRD
+                  </CardItem>
+                  <CardItem translateZ="50" className="text-8xl text-accent">
+                    ₹899
+                  </CardItem>
+                  <CardItem
+                    translateZ="25"
+                    className="text-sm text-muted-foreground"
+                  >
+                    FOR NON - IEDC MEMBERS
+                  </CardItem>
+                  <CardItem
+                    translateZ={125}
+                    className="w-full flex justify-center"
+                  >
+                    <Image
+                      width={275}
+                      height={100}
+                      loading="lazy"
+                      src="/non members ticket.png"
+                      alt="non members ticket"
+                      className="py-14"
+                    />
+                  </CardItem>
+                  <div className="w-full flex justify-center mt-5">
                     <CardItem
-                      translateZ="25"
-                      className="text-sm text-muted-foreground"
+                      translateZ="75"
+                      className="w-full flex justify-center"
                     >
-                      FOR NON - IEDC MEMBERS
-                    </CardItem>
-                    <div className="w-full flex justify-center mt-64">
-                      <CardItem
-                        translateZ="75"
-                        className="w-full flex justify-center"
+                      <a
+                        href="https://makemypass.com/enova-mea"
+                        className="w-full h-16 flex justify-center text-2xl items-center border-border border hover:bg-accent rounded-lg transition-all duration-500"
                       >
-                        <a
-                          href="https://makemypass.com/enova-mea"
-                          className="w-full h-16 flex justify-center text-2xl items-center border-border border hover:bg-accent rounded-lg transition-all duration-500"
-                        >
-                          get tickets
-                        </a>
-                      </CardItem>
-                    </div>
+                        get tickets
+                      </a>
+                    </CardItem>
                   </div>
-                </CardBody>
-              </CardContainer>
-            </div>
+                </div>
+              </CardBody>
+            </CardContainer>
           </div>
         </div>
       </section>
