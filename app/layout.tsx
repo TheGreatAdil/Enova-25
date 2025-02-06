@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import CustomFont from "next/font/local";
+import Head from "next/head";
 
 const punavuori = CustomFont({
   src: "../fonts/punavuori.woff",
@@ -27,10 +28,8 @@ export const metadata: Metadata = {
     default: "Enova '25",
     template: "%s | Enova '25",
   },
-  openGraph: {
-    description:
-      "Join Enova '25, a premier three-day tech fest by IEDC MEA SB, featuring inspiring talk sessions, ideathon, cultural performances, RC shows, and fashion show. Don't miss out, register your tickets now for an unforgettable experience!",
-  },
+  description:
+    "Join Enova '25, a premier three-day tech fest by IEDC MEA SB, featuring inspiring talk sessions, ideathon, cultural performances, RC shows, and fashion show. Don't miss out, register your tickets now for an unforgettable experience!",
 };
 
 export default function RootLayout({
@@ -41,6 +40,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${punavuori.variable} antialiased dark scroll-smooth`}>
+        <Head>
+          <link rel="canonical" href="https://enova.iedcmea.org" />
+        </Head>
         <div>
           <NavBar />
         </div>

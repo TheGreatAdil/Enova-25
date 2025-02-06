@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
-export default function robot(): MetadataRoute.Robots {
+export default function robots(): MetadataRoute.
+Robots {
     return {
         rules: {
             userAgent: '*',

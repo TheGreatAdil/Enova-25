@@ -17,6 +17,7 @@ import TimeLeft from "@/components/TimeLeft";
 import EventCard from "@/components/EventCard";
 import Marquee from "@/components/ui/marquee";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
 
 const events = [
   {
@@ -116,20 +117,48 @@ export default function Home() {
 
         <div className="flex justify-center">
           <div className="w-full max-w-8xl flex justify-center">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {previousImages.map((image, i) => (
-                <div
-                  key={i}
-                  className="relative w-44 h-44 md:w-96 md:h-96 rounded-xl border border-border shadow-lg hover:scale-105 transition-all duration-500"
-                >
-                  <Image
-                    fill
-                    src={image.source}
-                    alt={image.alt}
-                    className="object-cover rounded-xl"
-                  />
-                </div>
-              ))}
+            <div className="w-full max-w-4-xl grid gap-4 mt-24">
+              <InfiniteSlider
+                className="h-fit"
+                durationOnHover={200}
+                duration={50}
+              >
+                {previousImages.map((image, i) => (
+                  <div
+                    key={i}
+                    className="relative w-44 h-44 md:w-64 md:h-64 rounded-xl border border-border shadow-lg "
+                  >
+                    <Image
+                      fill
+                      src={image.source}
+                      alt={image.alt}
+                      loading="lazy"
+                      className="object-cover rounded-xl hover:scale-105 hover:opacity-100 transition-all duration-500 opacity-75 bg-black backdrop-blur-lg"
+                    />
+                  </div>
+                ))}
+              </InfiniteSlider>
+              <InfiniteSlider
+                className="h-fit"
+                reverse
+                durationOnHover={200}
+                duration={50}
+              >
+                {previousImages.map((image, i) => (
+                  <div
+                    key={i}
+                    className="relative w-44 h-44 md:w-64 md:h-64 rounded-xl border border-border shadow-lg"
+                  >
+                    <Image
+                      fill
+                      src={image.source}
+                      alt={image.alt}
+                      loading="lazy"
+                      className="object-cover rounded-xl hover:scale-105 hover:opacity-100 transition-all duration-500 opacity-75 bg-black backdrop-blur-lg"
+                    />
+                  </div>
+                ))}
+              </InfiniteSlider>
             </div>
           </div>
         </div>
