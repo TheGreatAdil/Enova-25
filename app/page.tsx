@@ -17,7 +17,6 @@ import TimeLeft from "@/components/TimeLeft";
 import EventCard from "@/components/EventCard";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
-import Head from "next/head";
 
 const events = [
   {
