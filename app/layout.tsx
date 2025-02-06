@@ -9,8 +9,28 @@ const punavuori = CustomFont({
 });
 
 export const metadata: Metadata = {
-  title: "Enova '25",
-  description: "As distinct as you!",
+  metadataBase: new URL("https://enova.iedcmea.org"),
+  keywords: [
+    "Enova",
+    "Enova tech fest",
+    "Enova '25",
+    "IEDC MEA SB events",
+    "tech fest Kerala",
+    "MEA Engineering College events",
+    "student innovation events",
+    "Enova ideathon",
+    "Enova RC show",
+    "Enova fashion show",
+    "tech events 2025",
+  ],
+  title: {
+    default: "Enova '25",
+    template: "%s | Enova '25",
+  },
+  openGraph: {
+    description:
+      "Join Enova '25, a premier three-day tech fest by IEDC MEA SB, featuring inspiring talk sessions, ideathon, cultural performances, RC shows, and fashion show. Don't miss out, register your tickets now for an unforgettable experience!",
+  },
 };
 
 export default function RootLayout({
