@@ -1,101 +1,247 @@
+import { SplashCursor } from "@/components/ui/splash-cursor";
+import Enova from "@/public/enova logo.png";
 import Image from "next/image";
+import {
+  ChevronDownIcon,
+  PodcastIcon,
+  CarIcon,
+  Music4Icon,
+  BlocksIcon,
+  LightbulbIcon,
+  Gamepad2Icon,
+  HandshakeIcon,
+  ShirtIcon,
+} from "lucide-react";
+import { previousImages } from "@/lib/constants";
+import TimeLeft from "@/components/TimeLeft";
+import EventCard from "@/components/EventCard";
+import Marquee from "@/components/ui/marquee";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+
+const events = [
+  {
+    name: "Talk sessions",
+    icon: <PodcastIcon className="size- md:size-20 " />,
+    description: "talk sessions from renowned speakers",
+  },
+  {
+    name: "Workshops",
+    icon: <BlocksIcon className="size- md:size-20 " />,
+    description: "level up your skills with amazing workshops",
+  },
+  {
+    name: "Ideathon",
+    icon: <LightbulbIcon className="size- md:size-20 " />,
+    description: "test out your idea in the ideathon",
+  },
+  {
+    name: "RC Show",
+    icon: <CarIcon className="size- md:size-20 " />,
+    description: "enjoy a thrilling show of RC cars and aircrafts",
+  },
+
+  {
+    name: "Games",
+    icon: <Gamepad2Icon className="size- md:size-20 " />,
+    description: "compete with peers on various games",
+  },
+  {
+    name: "Culturals",
+    icon: <Music4Icon className="size- md:size-20 " />,
+    description: "enjoy a night of amazing cultural activities",
+  },
+  {
+    name: "Icebreaking",
+    icon: <HandshakeIcon className="size- md:size-20 " />,
+    description: "meet up and collaborate with new people",
+  },
+  {
+    name: "Fashion Show",
+    icon: <ShirtIcon className="size- md:size-20 " />,
+    description: "watch as models take the stage to display fashion",
+  },
+];
+
+const arr = [
+  "earlybird out now",
+  "earlybird out now",
+  "earlybird out now",
+  "earlybird out now",
+  "earlybird out now",
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="overflow-hidden">
+      <div>
+        <SplashCursor />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <main className="min-h-screen" id="enova">
+        <div className="grid md:grid-cols-2">
+          <div className="flex justify-center pt-32 md:py-64">
+            <div className="w-full max-w-2xl md:max-w-4xl grid md:flex justify-center md:justify-start items-end ">
+              <div className="flex justify-center mb-8 md:mb-0">
+                <Image src={Enova} width={200} height={200} alt="Enova logo" />
+              </div>
+              <div className="text-center md:text-left">
+                <h1 className="text-6xl md:text-8xl font-bold">enova</h1>
+                <p className="text-lg tracking-widest">AS DISTINCTIVE AS YOU</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-4 md:py-64">
+            <div className="flex justify-center w-full max-w-2xl md:max-w-4xl">
+              <div className="grid justify-center mb-8 md:mb-0 pt-12">
+                <h2>Time Left</h2>
+                <div className="flex justify-center">
+                  <TimeLeft />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center">
+          <ChevronDownIcon className="animate-bounce size-8 mt-8" />
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <section className="min-h-screen justify-center" id="previous">
+        <div className="flex justify-center py-8 pt-16  md:pt-32 md:mt-0">
+          <h2 className="text-2xl md:text-6xl">previous edition</h2>
+        </div>
+
+        <div className="flex justify-center">
+          <div className="w-full max-w-8xl flex justify-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {previousImages.map((image, i) => (
+                <div
+                  key={i}
+                  className="relative w-44 h-44 md:w-96 md:h-96 rounded-xl border border-border shadow-lg hover:scale-105 transition-all duration-500"
+                >
+                  <Image
+                    fill
+                    src={image.source}
+                    alt={image.alt}
+                    className="object-cover rounded-xl"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="min-h-screen justify-center" id="events">
+        <div className="flex justify-center py-8 pt-16  md:pt-32 md:mt-0">
+          <h2 className="text-2xl md:text-6xl">events</h2>
+        </div>
+
+        <div className="flex justify-center">
+          <div className="w-full max-w-8xl flex justify-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {events.map((event, i) => (
+                <EventCard key={i} event={event} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="min-h-screen justify-center" id="tickets">
+        <div className="flex justify-center pt-16  md:pt-32 md:mt-0">
+          <h2 className="text-2xl md:text-6xl">tickets</h2>
+        </div>
+
+        <div className="py-12">
+          <Marquee pauseOnHover={false} direction="left" speed={7}>
+            {Array(4)
+              .fill("early bird open")
+              .map((message, index) => (
+                <h4
+                  key={index}
+                  className="text-accent text-center min-w-fit px-32"
+                >
+                  {message}
+                </h4>
+              ))}
+          </Marquee>
+        </div>
+
+        <div className="flex justify-center">
+          <div className="w-full max-w-8xl flex justify-center">
+            <div className="grid grid-cols-2 gap-10">
+              <CardContainer>
+                <CardBody className="w-86 h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
+                  <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
+                  <div className="p-6">
+                    <CardItem translateZ="25" className="text-xl text-white">
+                      EARLY BIRD
+                    </CardItem>
+                    <CardItem translateZ="50" className="text-8xl text-accent">
+                      ₹799
+                    </CardItem>
+                    <CardItem
+                      translateZ="25"
+                      className="text-sm text-muted-foreground"
+                    >
+                      FOR IEDC MEMBERS
+                    </CardItem>
+                    <div className="w-full flex justify-center mt-64">
+                      <CardItem
+                        translateZ="75"
+                        className="w-full flex justify-center"
+                      >
+                        <a
+                          href="https://makemypass.com/enova-mea"
+                          className="w-full h-16 flex justify-center text-2xl items-center border-border border hover:bg-accent rounded-lg transition-all duration-500"
+                        >
+                          get tickets
+                        </a>
+                      </CardItem>
+                    </div>
+                  </div>
+                </CardBody>
+              </CardContainer>
+
+              <CardContainer>
+                <CardBody className="w-86 h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
+                  <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
+                  <div className="p-6">
+                    <CardItem translateZ="25" className="text-xl text-white">
+                      EARLY BIRD
+                    </CardItem>
+                    <CardItem translateZ="50" className="text-8xl text-accent">
+                      ₹899
+                    </CardItem>
+                    <CardItem
+                      translateZ="25"
+                      className="text-sm text-muted-foreground"
+                    >
+                      FOR NON - IEDC MEMBERS
+                    </CardItem>
+                    <div className="w-full flex justify-center mt-64">
+                      <CardItem
+                        translateZ="75"
+                        className="w-full flex justify-center"
+                      >
+                        <a
+                          href="https://makemypass.com/enova-mea"
+                          className="w-full h-16 flex justify-center text-2xl items-center border-border border hover:bg-accent rounded-lg transition-all duration-500"
+                        >
+                          get tickets
+                        </a>
+                      </CardItem>
+                    </div>
+                  </div>
+                </CardBody>
+              </CardContainer>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
