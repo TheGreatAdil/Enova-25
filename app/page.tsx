@@ -8,9 +8,11 @@ import {
   Music4Icon,
   BlocksIcon,
   LightbulbIcon,
-  Gamepad2Icon,
   HandshakeIcon,
   ShirtIcon,
+  BrainIcon,
+  SpeechIcon,
+  Gamepad2Icon,
 } from "lucide-react";
 import { previousImages } from "@/lib/constants";
 import TimeLeft from "@/components/TimeLeft";
@@ -41,9 +43,9 @@ const events = [
   },
 
   {
-    name: "Games",
-    icon: <Gamepad2Icon className="size- md:size-20 " />,
-    description: "compete with peers on various games",
+    name: "Mentalism",
+    icon: <BrainIcon className="size- md:size-20 " />,
+    description: "get your minds blown by the mentalist",
   },
   {
     name: "Culturals",
@@ -59,6 +61,16 @@ const events = [
     name: "Fashion Show",
     icon: <ShirtIcon className="size- md:size-20 " />,
     description: "watch as models take the stage to display fashion",
+  },
+  {
+    name: "Panel Discussion",
+    icon: <SpeechIcon className="size- md:size-20 " />,
+    description: "gather knowledge as experts discuss",
+  },
+  {
+    name: "Games",
+    icon: <Gamepad2Icon className="size- md:size-20 " />,
+    description: "compete with peers on various games",
   },
 ];
 
@@ -104,8 +116,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center">
-          <ChevronDownIcon className="animate-bounce size-8 mt-8" />
+        <div className="grid justify-center text-c">
+          <p className="text-sm tracking-widest px-3 flex text-center">
+            Join Enova '25, a three-day tech fest by IEDC MEA SB with talks,
+            ideathon, RC shows, and more. Register now for an unforgettable
+            experience!
+          </p>
+          <div className="flex justify-center">
+            <ChevronDownIcon className="animate-bounce size-8 mt-10" />
+          </div>
         </div>
       </main>
 
@@ -170,7 +189,7 @@ export default function Home() {
 
         <div className="flex justify-center">
           <div className="w-full max-w-8xl flex justify-center">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
               {events.map((event, i) => (
                 <EventCard key={i} event={event} />
               ))}
@@ -184,7 +203,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-6xl">tickets</h2>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-8 md:mt-16">
           <InfiniteSlider duration={10}>
             {Array(8)
               .fill("early bird open")
@@ -200,20 +219,23 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center">
-          <div className="mt-16 grid md:grid-cols-2 md:gap-10">
+          <div className="mt-8 md:mt-16 grid md:grid-cols-2 gap-5 md:gap-10">
             <CardContainer>
-              <CardBody className="w-86 h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
+              <CardBody className="w-86 h-[30rem] md:h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
                 <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
                 <div className="p-6">
-                  <CardItem translateZ="25" className="text-xl text-white">
+                  <CardItem translateZ="25" className="md:text-xl text-white">
                     EARLY BIRD
                   </CardItem>
-                  <CardItem translateZ="50" className="text-8xl text-accent">
+                  <CardItem
+                    translateZ="50"
+                    className="text-7xl md:text-8xl text-accent"
+                  >
                     ₹799
                   </CardItem>
                   <CardItem
                     translateZ="25"
-                    className="text-sm text-muted-foreground"
+                    className="text-[12px] md:text-sm text-muted-foreground"
                   >
                     FOR IEDC MEMBERS
                   </CardItem>
@@ -248,18 +270,21 @@ export default function Home() {
             </CardContainer>
 
             <CardContainer>
-              <CardBody className="w-86 h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
+              <CardBody className="w-86 h-[30rem] md:h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
                 <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
                 <div className="p-6">
-                  <CardItem translateZ="25" className="text-xl text-white">
+                  <CardItem translateZ="25" className="md:text-xl text-white">
                     EARLY BIRD
                   </CardItem>
-                  <CardItem translateZ="50" className="text-8xl text-accent">
+                  <CardItem
+                    translateZ="50"
+                    className="text-7xl md:text-8xl text-accent"
+                  >
                     ₹899
                   </CardItem>
                   <CardItem
                     translateZ="25"
-                    className="text-sm text-muted-foreground"
+                    className="text-[12px] md:text-sm text-muted-foreground"
                   >
                     FOR NON - IEDC MEMBERS
                   </CardItem>
