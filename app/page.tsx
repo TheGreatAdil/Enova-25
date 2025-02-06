@@ -15,7 +15,6 @@ import {
 import { previousImages } from "@/lib/constants";
 import TimeLeft from "@/components/TimeLeft";
 import EventCard from "@/components/EventCard";
-import Marquee from "@/components/ui/marquee";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 
@@ -133,7 +132,7 @@ export default function Home() {
                       src={image.source}
                       alt={image.alt}
                       loading="lazy"
-                      className="object-cover rounded-xl hover:scale-105 hover:opacity-100 transition-all duration-500 opacity-75 bg-black backdrop-blur-lg"
+                      className="object-cover rounded-xl hover:scale-105 hover:opacity-100 transition-all duration-500 opacity-100 md:opacity-75 bg-black backdrop-blur-lg"
                     />
                   </div>
                 ))}
@@ -154,7 +153,7 @@ export default function Home() {
                       src={image.source}
                       alt={image.alt}
                       loading="lazy"
-                      className="object-cover rounded-xl hover:scale-105 hover:opacity-100 transition-all duration-500 opacity-75 bg-black backdrop-blur-lg"
+                      className="object-cover rounded-xl hover:scale-105 hover:opacity-100 transition-all duration-500 opacity-100 md:opacity-75 bg-black backdrop-blur-lg"
                     />
                   </div>
                 ))}
@@ -186,7 +185,7 @@ export default function Home() {
         </div>
 
         <div className="mt-16">
-          <Marquee pauseOnHover={false} direction="left" speed={7}>
+          <InfiniteSlider duration={10}>
             {Array(8)
               .fill("early bird open")
               .map((message, index) => (
@@ -197,7 +196,7 @@ export default function Home() {
                   {message}
                 </h4>
               ))}
-          </Marquee>
+          </InfiniteSlider>
         </div>
 
         <div className="flex justify-center">
