@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Enova '25",
   },
   description:
-    "Join Enova '25, a three-day tech fest by IEDC MEA SB with talks, ideathon, RC shows, cultural performances, and more. Register now for an unforgettable experience!",
+    "Join Enova '25, a three-day tech fest by IEDC MEA SB with talks, ideathon, RC shows, and more. Register now for an unforgettable experience!",
 };
 
 export default function RootLayout({
