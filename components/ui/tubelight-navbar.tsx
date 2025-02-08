@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { SparklesIcon } from "lucide-react";
+import { PhoneCallIcon, SparklesIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { HomeIcon, Repeat, TicketIcon } from "lucide-react";
 
@@ -17,6 +17,7 @@ export function NavBar({ className }: NavBarProps) {
     { name: "Previous edition", url: "#previous", icon: Repeat },
     { name: "Events", url: "#events", icon: SparklesIcon },
     { name: "Tickets", url: "#tickets", icon: TicketIcon },
+    { name: "Contact", url: "#contact", icon: PhoneCallIcon },
   ];
 
   const [activeTab, setActiveTab] = useState(items[0].name);

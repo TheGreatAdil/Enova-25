@@ -13,12 +13,18 @@ import {
   BrainIcon,
   SpeechIcon,
   Gamepad2Icon,
+  InstagramIcon,
 } from "lucide-react";
 import { previousImages } from "@/lib/constants";
 import TimeLeft from "@/components/TimeLeft";
 import EventCard from "@/components/EventCard";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import {
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandWhatsapp,
+} from "@tabler/icons-react";
 
 const events = [
   {
@@ -30,6 +36,11 @@ const events = [
     name: "Workshops",
     icon: <BlocksIcon className="size- md:size-20 " />,
     description: "level up your skills with amazing workshops",
+  },
+  {
+    name: "Fashion Show",
+    icon: <ShirtIcon className="size- md:size-20 " />,
+    description: "watch as models take the stage to display fashion",
   },
   {
     name: "Ideathon",
@@ -56,11 +67,6 @@ const events = [
     name: "Icebreaking",
     icon: <HandshakeIcon className="size- md:size-20 " />,
     description: "meet up and collaborate with new people",
-  },
-  {
-    name: "Fashion Show",
-    icon: <ShirtIcon className="size- md:size-20 " />,
-    description: "watch as models take the stage to display fashion",
   },
   {
     name: "Panel Discussion",
@@ -204,7 +210,7 @@ export default function Home() {
         </div>
 
         <div className="mt-8 md:mt-16">
-          <InfiniteSlider duration={10}>
+          <InfiniteSlider duration={25}>
             {Array(8)
               .fill("early bird open")
               .map((message, index) => (
@@ -317,6 +323,74 @@ export default function Home() {
                 </div>
               </CardBody>
             </CardContainer>
+          </div>
+        </div>
+      </section>
+
+      <section className="min-h-screen justify-center" id="contact">
+        <div className="flex justify-center py-8 pt-16  md:pt-32 md:mt-0">
+          <h2 className="text-2xl md:text-6xl">contact</h2>
+        </div>
+
+        <div className="flex justify-center w-max-4xl mb-12">
+          <div className="flex justify-center border-border border rounded-xl bg-background/5 backdrop-blur-lg shadow-lg">
+            <div className="grid md:grid-cols-2">
+              <div className="w-96 h-96 md:w-[30rem] md:h-[30rem] p-4 pb-2 md:pb-4 md:pr-2">
+                <div className="w-full h-full rounded-md overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.0036305406115!2d76.2601200748089!3d11.038353989126797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba632af7ef31bdd%3A0xe97e8abadab1d29d!2sMEA%20Engineering%20College!5e0!3m2!1sen!2sin!4v1738994703709!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    loading="lazy"
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col justify-between p-4 m-4 mt-2 md:mt-4 md:ml-2 rounded-xl border border-border">
+                <div>
+                  <h3 className="text-4xl">contact us</h3>
+
+                  <h4 className="text-xl text-accent mt-6">Call</h4>
+                  <p className="tracking-widest">+91 85904 26086</p>
+                  <p className="tracking-widest">+91 80890 93007</p>
+
+                  <h4 className="text-xl text-accent mt-6">Mail</h4>
+                  <p className="tracking-[0.2rem]">iedc@meaec.edu.in</p>
+                  <h4 className="text-xl text-accent mt-6">Socials</h4>
+                  <div className="flex gap-2 mt-1">
+                    <a href="https://instagram.com/iedcmea">
+                      <IconBrandInstagram />
+                    </a>
+                    <a href="https://linkedin.com/company/iedcmea/">
+                      <IconBrandLinkedin />
+                    </a>
+                    <a href="https://linkedin.com/company/iedcmea/">
+                      <IconBrandWhatsapp />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <CardContainer className="w-full mt-6 flex-1">
+                    <CardBody className="w-full h-full bg-background/5 hover:shadow-2xl border border-border rounded-xl">
+                      <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
+                      <CardItem
+                        translateZ={75}
+                        className="w-full flex justify-between p-6"
+                      >
+                        <h4>Powered By</h4>
+                        <Image
+                          width={100}
+                          height={100}
+                          src="/sponsors/tascbar.png"
+                          alt="tascbar logo"
+                          loading="lazy"
+                        />
+                      </CardItem>
+                    </CardBody>
+                  </CardContainer>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

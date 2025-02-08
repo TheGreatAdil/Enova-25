@@ -63,37 +63,4 @@ const previousImages = [
     },
 ];
 
-const events = [
-    {
-        name: "talk sessions",
-        icon: PodcastIcon,
-        
-    },
-    {
-        name: "talk sessions",
-        icon: PodcastIcon,
-        
-    },
-    {
-        name: "talk sessions",
-        icon: PodcastIcon,
-        
-    },
-    {
-        name: "talk sessions",
-        icon: PodcastIcon,
-        
-    },
-    {
-        name: "talk sessions",
-        icon: PodcastIcon,
-        
-    },
-    {
-        name: "talk sessions",
-        icon: PodcastIcon,
-        
-    },
-];
-
-export  {previousImages, events};
+export  {previousImages};
