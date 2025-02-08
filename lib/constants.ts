@@ -1,5 +1,3 @@
-import { PodcastIcon } from "lucide-react";
-
 const previousImages = [
     {
         source: "/prevent/drumming.JPG",

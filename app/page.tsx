@@ -13,7 +13,6 @@ import {
   BrainIcon,
   SpeechIcon,
   Gamepad2Icon,
-  InstagramIcon,
 } from "lucide-react";
 import { previousImages } from "@/lib/constants";
 import TimeLeft from "@/components/TimeLeft";
