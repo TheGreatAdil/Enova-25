@@ -363,7 +363,7 @@ export default function Home() {
                     <a href="https://linkedin.com/company/iedcmea/">
                       <IconBrandLinkedin />
                     </a>
-                    <a href="https://linkedin.com/company/iedcmea/">
+                    <a href="https://wa.link/w5a8q8">
                       <IconBrandWhatsapp />
                     </a>
                   </div>
