@@ -3,6 +3,7 @@ import "./globals.css";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import CustomFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const punavuori = CustomFont({
   src: "../fonts/punavuori.woff",
@@ -113,6 +114,7 @@ export default function RootLayout({
         </div>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
