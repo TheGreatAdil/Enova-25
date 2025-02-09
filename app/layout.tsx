@@ -3,6 +3,7 @@ import "./globals.css";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import CustomFont from "next/font/local";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/next";
 
 const punavuori = CustomFont({
   src: "../fonts/punavuori.woff",
@@ -39,24 +40,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta property="og:title" content="Enova '25 | Tech Fest" />
+        <meta
+          property="og:description"
+          content="Join Enova '25, a three-day tech fest by IEDC MEA SB with talks, ideathon, RC shows, cultural performances, and more!"
+        />
+        <meta property="og:image" content="/enova logo.png" />
+        <meta property="og:url" content="https://enova.iedcmea.org" />
+        <meta property="og:type" content="website" />
+
+        <link rel="canonical" href="https://enova.iedcmea.org" />
+      </Head>
       <body className={`${punavuori.variable} antialiased dark scroll-smooth`}>
         <div>
           <NavBar />
         </div>
         {children}
-
-        <Head>
-          <meta property="og:title" content="Enova '25 | Tech Fest" />
-          <meta
-            property="og:description"
-            content="Join Enova '25, a three-day tech fest by IEDC MEA SB with talks, ideathon, RC shows, cultural performances, and more!"
-          />
-          <meta property="og:image" content="/enova logo.png" />
-          <meta property="og:url" content="https://enova.iedcmea.org" />
-          <meta property="og:type" content="website" />
-
-          <link rel="canonical" href="https://enova.iedcmea.org" />
-        </Head>
+        <Analytics />
       </body>
     </html>
   );

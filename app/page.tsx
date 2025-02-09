@@ -123,9 +123,9 @@ export default function Home() {
 
         <div className="grid justify-center text-c">
           <p className="text-sm tracking-widest px-3 flex text-center">
-            Join Enova &apos;25, a three-day tech fest by IEDC MEA SB with
-            talks, ideathon, RC shows, and more. Register now for an
-            unforgettable experience!
+            Enova &apos;25 is a three-day tech fest organized by IEDC MEA SB
+            with a lot of exiciting events. Register now for an unforgettable
+            experience!
           </p>
           <div className="flex justify-center">
             <ChevronDownIcon className="animate-bounce size-8 mt-10" />
@@ -331,7 +331,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-6xl">contact</h2>
         </div>
 
-        <div className="flex justify-center w-max-4xl mb-12">
+        <div className="flex justify-center w-max-4xl mb-12 lg:mt-16">
           <div className="flex justify-center border-border border rounded-xl bg-background/5 backdrop-blur-lg shadow-lg">
             <div className="grid md:grid-cols-2">
               <div className="w-96 h-96 md:w-[30rem] md:h-[30rem] p-4 pb-2 md:pb-4 md:pr-2">
