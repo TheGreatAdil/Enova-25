@@ -134,7 +134,7 @@ export default function Home() {
       </main>
 
       <section className="min-h-screen justify-center" id="previous">
-        <div className="flex justify-center py-8 pt-16  md:pt-32 md:mt-0">
+        <div className="flex justify-center py-8 pt-24 md:pt-32 md:mt-0">
           <h2 className="text-2xl md:text-6xl">previous edition</h2>
         </div>
 
@@ -188,7 +188,7 @@ export default function Home() {
       </section>
 
       <section className="min-h-screen justify-center" id="events">
-        <div className="flex justify-center py-8 pt-16  md:pt-32 md:mt-0">
+        <div className="flex justify-center py-8 pt-24 md:pt-32 md:mt-0">
           <h2 className="text-2xl md:text-6xl">events</h2>
         </div>
 
@@ -204,7 +204,7 @@ export default function Home() {
       </section>
 
       <section className="min-h-screen justify-center" id="tickets">
-        <div className="flex justify-center pt-16 md:pt-32 md:mt-0">
+        <div className="flex justify-center py-8 pt-24 md:pt-32 md:mt-0">
           <h2 className="text-2xl md:text-6xl">tickets</h2>
         </div>
 
@@ -327,7 +327,7 @@ export default function Home() {
       </section>
 
       <section className="min-h-screen justify-center" id="contact">
-        <div className="flex justify-center py-8 pt-16  md:pt-32 md:mt-0">
+        <div className="flex justify-center py-8 pt-24 md:pt-32 md:mt-0">
           <h2 className="text-2xl md:text-6xl">contact</h2>
         </div>
 
