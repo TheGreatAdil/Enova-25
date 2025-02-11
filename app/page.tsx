@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <div>
-        
+        <SplashCursor />
       </div>
 
       <main className="min-h-screen" id="enova">
