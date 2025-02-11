@@ -211,11 +211,11 @@ export default function Home() {
         <div className="mt-8 md:mt-16">
           <InfiniteSlider duration={25}>
             {Array(8)
-              .fill("registrations open")
+              .fill("registrations open now")
               .map((message, index) => (
                 <h4
                   key={index}
-                  className="text-accent text-center min-w-fit px-32"
+                  className="text-accent tracking-widest text-center min-w-fit px-32"
                 >
                   {message}
                 </h4>
@@ -240,7 +240,7 @@ export default function Home() {
                   </CardItem>
                   <CardItem
                     translateZ="25"
-                    className="text-[12px] md:text-sm text-muted-foreground"
+                    className="max-w-72 text-[12px] md:text-sm text-muted-foreground tracking-wider"
                   >
                     FOR IEDC MEMBERS
                   </CardItem>
@@ -254,9 +254,17 @@ export default function Home() {
                       loading="lazy"
                       src="/members ticket.png"
                       alt="members ticket"
-                      className="py-14"
+                      className="py-9"
                     />
                   </CardItem>
+
+                  <CardItem
+                    translateZ="25"
+                    className="max-w-72 text-[12px] md:text-sm text-muted-foreground tracking-wider"
+                  >
+                    Bulk tickets are available with exciting offer!
+                  </CardItem>
+
                   <div className="w-full flex justify-center mt-5">
                     <CardItem
                       translateZ="75"
@@ -289,7 +297,7 @@ export default function Home() {
                   </CardItem>
                   <CardItem
                     translateZ="25"
-                    className="text-[12px] md:text-sm text-muted-foreground"
+                    className="max-w-72 text-[12px] md:text-sm text-muted-foreground tracking-wider"
                   >
                     FOR NON - IEDC MEMBERS
                   </CardItem>
@@ -303,9 +311,17 @@ export default function Home() {
                       loading="lazy"
                       src="/non members ticket.png"
                       alt="non members ticket"
-                      className="py-14"
+                      className="py-9"
                     />
                   </CardItem>
+
+                  <CardItem
+                    translateZ="25"
+                    className="max-w-72 text-[12px] md:text-sm text-muted-foreground tracking-wider"
+                  >
+                    Bulk tickets are available with exciting offer!
+                  </CardItem>
+
                   <div className="w-full flex justify-center mt-5">
                     <CardItem
                       translateZ="75"
