@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <div>
-        <SplashCursor />
+        
       </div>
 
       <main className="min-h-screen" id="enova">
@@ -211,7 +211,7 @@ export default function Home() {
         <div className="mt-8 md:mt-16">
           <InfiniteSlider duration={25}>
             {Array(8)
-              .fill("early bird open")
+              .fill("registrations open")
               .map((message, index) => (
                 <h4
                   key={index}
@@ -230,13 +230,13 @@ export default function Home() {
                 <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
                 <div className="p-6">
                   <CardItem translateZ="25" className="md:text-xl text-white">
-                    EARLY BIRD
+                    MEMBERS TICKET
                   </CardItem>
                   <CardItem
                     translateZ="50"
                     className="text-7xl md:text-8xl text-accent"
                   >
-                    ₹799
+                    ₹899
                   </CardItem>
                   <CardItem
                     translateZ="25"
@@ -279,13 +279,13 @@ export default function Home() {
                 <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
                 <div className="p-6">
                   <CardItem translateZ="25" className="md:text-xl text-white">
-                    EARLY BIRD
+                    GENERAL TICKET
                   </CardItem>
                   <CardItem
                     translateZ="50"
                     className="text-7xl md:text-8xl text-accent"
                   >
-                    ₹899
+                    ₹999
                   </CardItem>
                   <CardItem
                     translateZ="25"
