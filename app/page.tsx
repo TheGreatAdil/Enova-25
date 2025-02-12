@@ -121,12 +121,19 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid justify-center text-c">
+        <div className="grid justify-center">
           <p className="text-sm tracking-widest px-3 flex text-center">
             Enova &apos;25 is a three-day tech fest organized by IEDC MEA SB
             with a lot of exiciting events. Register now for an unforgettable
             experience!
           </p>
+          <a
+            href="/brochure.pdf"
+            target="_blank"
+            className="w-64 h-16 my-8 mx-auto flex justify-center items-center bg-accent rounded-xl border-border border shadow-lg text-black text-lg tracking-widest"
+          >
+            View Brochure
+          </a>
           <div className="flex justify-center">
             <ChevronDownIcon className="animate-bounce size-8 mt-10" />
           </div>
@@ -259,8 +266,8 @@ export default function Home() {
                   </CardItem>
 
                   <CardItem
-                    translateZ="25"
-                    className="max-w-72 text-[12px] md:text-sm text-muted-foreground tracking-wider"
+                    translateZ="75"
+                    className="max-w-72 text-[12px] md:text-sm text-accent tracking-wider"
                   >
                     Bulk tickets are available with exciting offer!
                   </CardItem>
@@ -316,8 +323,8 @@ export default function Home() {
                   </CardItem>
 
                   <CardItem
-                    translateZ="25"
-                    className="max-w-72 text-[12px] md:text-sm text-muted-foreground tracking-wider"
+                    translateZ="75"
+                    className="max-w-72 text-[12px] md:text-sm text-accent tracking-wider"
                   >
                     Bulk tickets are available with exciting offer!
                   </CardItem>
