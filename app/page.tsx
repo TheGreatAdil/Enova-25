@@ -130,7 +130,7 @@ export default function Home() {
           <a
             href="/brochure.pdf"
             target="_blank"
-            className="w-64 h-16 my-8 mx-auto flex justify-center items-center bg-accent rounded-xl border-border border shadow-lg text-black text-lg tracking-widest"
+            className="w-72 h-16 my-8 mx-auto flex justify-center items-center bg-accent rounded-xl border-border border shadow-lg text-black text-2xl hover:scale-105 transition-all duration-500"
           >
             View Brochure
           </a>
