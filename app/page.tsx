@@ -231,7 +231,7 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center">
-          <div className="mt-8 md:mt-16 grid md:grid-cols-2 gap-5 md:gap-10">
+          <div className="mt-8 md:mt-16 grid md:grid-cols-3 gap-5 md:gap-10">
             <CardContainer>
               <CardBody className="w-86 h-[30rem] md:h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
                 <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
@@ -261,18 +261,11 @@ export default function Home() {
                       loading="lazy"
                       src="/members ticket.png"
                       alt="members ticket"
-                      className="py-9"
+                      className="py-16"
                     />
                   </CardItem>
 
-                  <CardItem
-                    translateZ="75"
-                    className="max-w-72 text-[12px] md:text-sm text-accent tracking-wider"
-                  >
-                    Bulk tickets are available with exciting offer!
-                  </CardItem>
-
-                  <div className="w-full flex justify-center mt-5">
+                  <div className="w-full flex justify-center mt-2">
                     <CardItem
                       translateZ="75"
                       className="w-full flex justify-center"
@@ -318,18 +311,61 @@ export default function Home() {
                       loading="lazy"
                       src="/non members ticket.png"
                       alt="non members ticket"
-                      className="py-9"
+                      className="py-16"
                     />
                   </CardItem>
 
+                  <div className="w-full flex justify-center mt-2">
+                    <CardItem
+                      translateZ="75"
+                      className="w-full flex justify-center"
+                    >
+                      <a
+                        href="https://makemypass.com/enova-mea"
+                        className="w-full h-16 flex justify-center text-2xl items-center border-border border hover:bg-accent rounded-lg transition-all duration-500"
+                      >
+                        get tickets
+                      </a>
+                    </CardItem>
+                  </div>
+                </div>
+              </CardBody>
+            </CardContainer>
+
+            <CardContainer>
+              <CardBody className="w-86 h-[30rem] md:h-[32rem] bg-background/5 hover:shadow-2xl border border-border rounded-xl">
+                <div className="absolute -z-20 min-w-full min-h-full backdrop-blur-lg rounded-xl" />
+                <div className="p-6">
+                  <CardItem translateZ="25" className="md:text-xl text-white">
+                    BULK TICKET
+                  </CardItem>
                   <CardItem
-                    translateZ="75"
-                    className="max-w-72 text-[12px] md:text-sm text-accent tracking-wider"
+                    translateZ="50"
+                    className="text-7xl md:text-8xl text-accent tracking-wider"
                   >
-                    Bulk tickets are available with exciting offer!
+                    ₹1100
+                  </CardItem>
+                  <CardItem
+                    translateZ="25"
+                    className="max-w-72 text-[12px] md:text-sm text-muted-foreground tracking-wider"
+                  >
+                    OFF ON 10+ TICKETS
+                  </CardItem>
+                  <CardItem
+                    translateZ={125}
+                    className="w-full flex justify-center"
+                  >
+                    <Image
+                      width={275}
+                      height={100}
+                      loading="lazy"
+                      src="/bulk ticket.png"
+                      alt="bulk ticket"
+                      className="py-16"
+                    />
                   </CardItem>
 
-                  <div className="w-full flex justify-center mt-5">
+                  <div className="w-full flex justify-center mt-2">
                     <CardItem
                       translateZ="75"
                       className="w-full flex justify-center"
