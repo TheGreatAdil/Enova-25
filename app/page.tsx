@@ -32,14 +32,9 @@ const events = [
     description: "talk sessions from renowned speakers",
   },
   {
-    name: "Workshops",
-    icon: <BlocksIcon className="size- md:size-20 " />,
-    description: "level up your skills with amazing workshops",
-  },
-  {
-    name: "Fashion Show",
-    icon: <ShirtIcon className="size- md:size-20 " />,
-    description: "watch as models take the stage to display fashion",
+    name: "Panel Discussion",
+    icon: <SpeechIcon className="size- md:size-20 " />,
+    description: "gather knowledge as experts discuss",
   },
   {
     name: "Ideathon",
@@ -47,15 +42,9 @@ const events = [
     description: "test out your idea in the ideathon",
   },
   {
-    name: "RC Show",
-    icon: <CarIcon className="size- md:size-20 " />,
-    description: "enjoy a thrilling show of RC cars and aircrafts",
-  },
-
-  {
-    name: "Mentalism",
-    icon: <BrainIcon className="size- md:size-20 " />,
-    description: "get your minds blown by the mentalist",
+    name: "Workshops",
+    icon: <BlocksIcon className="size- md:size-20 " />,
+    description: "level up your skills with amazing workshops",
   },
   {
     name: "Culturals",
@@ -63,15 +52,27 @@ const events = [
     description: "enjoy a night of amazing cultural activities",
   },
   {
+    name: "Mentalism",
+    icon: <BrainIcon className="size- md:size-20 " />,
+    description: "get your minds blown by the mentalist",
+  },
+  {
     name: "Icebreaking",
     icon: <HandshakeIcon className="size- md:size-20 " />,
     description: "meet up and collaborate with new people",
   },
   {
-    name: "Panel Discussion",
-    icon: <SpeechIcon className="size- md:size-20 " />,
-    description: "gather knowledge as experts discuss",
+    name: "Fashion Show",
+    icon: <ShirtIcon className="size- md:size-20 " />,
+    description: "watch as models take the stage to display fashion",
   },
+
+  {
+    name: "RC Show",
+    icon: <CarIcon className="size- md:size-20 " />,
+    description: "enjoy a thrilling show of RC cars and aircrafts",
+  },
+
   {
     name: "Games",
     icon: <Gamepad2Icon className="size- md:size-20 " />,
@@ -100,7 +101,7 @@ export default function Home() {
                 />
               </div>
               <div className="text-center md:text-left">
-                <h1 className="text-6xl md:text-8xl font-bold">enova</h1>
+                <h1 className="text-5xl md:text-7xl font-bold">enova '25</h1>
                 <p className="text-lg tracking-widest">AS DISTINCTIVE AS YOU</p>
               </div>
             </div>
