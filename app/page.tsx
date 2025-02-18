@@ -130,13 +130,22 @@ export default function Home() {
             with a lot of exiciting events. Register now for an unforgettable
             experience!
           </p>
-          <a
-            href="/brochure.pdf"
-            target="_blank"
-            className="w-72 h-16 my-8 mx-auto flex justify-center items-center bg-accent rounded-xl border-border border shadow-lg text-black text-2xl hover:scale-105 transition-all duration-500"
-          >
-            View Brochure
-          </a>
+          <div className="grid md:grid-cols-2 my-8 mx-auto gap-4 md:gap-6">
+            <a
+              href="/brochure.pdf"
+              target="_blank"
+              className="w-80 h-16 flex justify-center items-center bg-accent rounded-xl border-border border shadow-lg text-black text-xl hover:scale-105 transition-all duration-500"
+            >
+              View Brochure
+            </a>
+            <a
+              href="https://bit.ly/Enova-Meet"
+              target="_blank"
+              className="w-80 h-16 flex justify-center items-center bg-background/5 backdrop-blur-lg rounded-xl border-accent border shadow-lg text-white text-xl hover:scale-105 transition-all duration-500"
+            >
+              Entrepreneur Meet
+            </a>
+          </div>
           <div className="flex justify-center">
             <ChevronDownIcon className="animate-bounce size-8 mt-10" />
           </div>
