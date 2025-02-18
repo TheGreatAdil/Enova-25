@@ -101,7 +101,9 @@ export default function Home() {
                 />
               </div>
               <div className="text-center md:text-left">
-                <h1 className="text-5xl md:text-7xl font-bold">enova '25</h1>
+                <h1 className="text-5xl md:text-7xl font-bold">
+                  enova &apos;25
+                </h1>
                 <p className="text-lg tracking-widest">AS DISTINCTIVE AS YOU</p>
               </div>
             </div>
